@@ -7,27 +7,180 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C226C7B295FF6300002848B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C226C7D295FF6300002848B /* Localizable.strings */; };
 		9C3D7CC0295F063D0019C6B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D7CBF295F063D0019C6B1 /* AppDelegate.swift */; };
 		9C3D7CC2295F063D0019C6B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D7CC1295F063D0019C6B1 /* SceneDelegate.swift */; };
-		9C3D7CC4295F063D0019C6B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D7CC3295F063D0019C6B1 /* ViewController.swift */; };
-		9C3D7CC7295F063D0019C6B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D7CC5295F063D0019C6B1 /* Main.storyboard */; };
+		9C3D7CC4295F063D0019C6B1 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D7CC3295F063D0019C6B1 /* VideoViewController.swift */; };
 		9C3D7CC9295F063E0019C6B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D7CC8295F063E0019C6B1 /* Assets.xcassets */; };
 		9C3D7CCC295F063E0019C6B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D7CCA295F063E0019C6B1 /* LaunchScreen.storyboard */; };
+		9C3D7CD8295F13490019C6B1 /* intro.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D7CD7295F13490019C6B1 /* intro.MP4 */; };
+		9C3D7CDB295F183A0019C6B1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C3D7CDA295F183A0019C6B1 /* SnapKit */; };
+		9C3D7CDD295F26B20019C6B1 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D7CDC295F26B20019C6B1 /* VideoPlayerView.swift */; };
+		9C68149F2962B55B00DB7AB4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68149E2962B55B00DB7AB4 /* Constants.swift */; };
+		9C6814A12962B58900DB7AB4 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6814A02962B58900DB7AB4 /* ChartsViewController.swift */; };
+		9C6814B92962C96800DB7AB4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6814B82962C96800DB7AB4 /* Charts */; };
+		9C6814C32962D9F800DB7AB4 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C6814C22962D9F800DB7AB4 /* blockerList.json */; };
+		9C6814C52962D9F800DB7AB4 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6814C42962D9F800DB7AB4 /* ContentBlockerRequestHandler.swift */; };
+		9C6814C92962D9F800DB7AB4 /* YT_AdBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C6814C02962D9F800DB7AB4 /* YT_AdBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C6814D42962E17400DB7AB4 /* blockerListForTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C6814D32962E17400DB7AB4 /* blockerListForTest.json */; };
+		9C6814D62962E17400DB7AB4 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6814D52962E17400DB7AB4 /* ContentBlockerRequestHandler.swift */; };
+		9C6814DA2962E17400DB7AB4 /* TestBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C6814D12962E17300DB7AB4 /* TestBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C6814E52962E36D00DB7AB4 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C6814E42962E36D00DB7AB4 /* blockerList.json */; };
+		9C6814E72962E36D00DB7AB4 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6814E62962E36D00DB7AB4 /* ContentBlockerRequestHandler.swift */; };
+		9C6814EB2962E36D00DB7AB4 /* FontsBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C6814E22962E36D00DB7AB4 /* FontsBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C68950429656F39001DD001 /* BlackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68950329656F39001DD001 /* BlackListViewController.swift */; };
+		9C7661122963FB8F00B351E9 /* blockerListAll.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C7661112963FB8F00B351E9 /* blockerListAll.json */; };
+		9C7661B9296446FD00B351E9 /* blockerListImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C7661B8296446FD00B351E9 /* blockerListImages.json */; };
+		9C7661BB2964470700B351E9 /* blockerListMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C7661BA2964470700B351E9 /* blockerListMedia.json */; };
+		9C7C953F2960346D008ED840 /* blockerListUsual.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C953E2960346D008ED840 /* blockerListUsual.json */; };
+		9C7C95412960346D008ED840 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C95402960346D008ED840 /* ContentBlockerRequestHandler.swift */; };
+		9C7C95452960346D008ED840 /* GamblingBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C7C953C2960346D008ED840 /* GamblingBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C7C955029603682008ED840 /* blockerList2.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C7C954F29603682008ED840 /* blockerList2.json */; };
+		9C7C955229603682008ED840 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C955129603682008ED840 /* ContentBlockerRequestHandler.swift */; };
+		9C7C955629603682008ED840 /* SocialNetwork.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C7C954D29603682008ED840 /* SocialNetwork.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9CF808B829630419006572B6 /* ContentBlockerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF808B729630419006572B6 /* ContentBlockerViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C6814C72962D9F800DB7AB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C3D7CB4295F063D0019C6B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6814BF2962D9F800DB7AB4;
+			remoteInfo = YT_AdBlocker;
+		};
+		9C6814D82962E17400DB7AB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C3D7CB4295F063D0019C6B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6814D02962E17300DB7AB4;
+			remoteInfo = TestBlocker;
+		};
+		9C6814E92962E36D00DB7AB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C3D7CB4295F063D0019C6B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6814E12962E36D00DB7AB4;
+			remoteInfo = FontsBlocker;
+		};
+		9C7C95432960346D008ED840 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C3D7CB4295F063D0019C6B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C7C953B2960346D008ED840;
+			remoteInfo = GamblingBlocker;
+		};
+		9C7C955429603682008ED840 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C3D7CB4295F063D0019C6B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C7C954C29603682008ED840;
+			remoteInfo = SocialNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C7C95342960345E008ED840 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9C7C955629603682008ED840 /* SocialNetwork.appex in Embed Foundation Extensions */,
+				9C6814EB2962E36D00DB7AB4 /* FontsBlocker.appex in Embed Foundation Extensions */,
+				9C6814C92962D9F800DB7AB4 /* YT_AdBlocker.appex in Embed Foundation Extensions */,
+				9C7C95452960346D008ED840 /* GamblingBlocker.appex in Embed Foundation Extensions */,
+				9C6814DA2962E17400DB7AB4 /* TestBlocker.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9C226C78295FF5F30002848B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9C226C7C295FF6300002848B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C226C7E295FF6340002848B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C3D7CBC295F063D0019C6B1 /* test_project_GTL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_project_GTL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3D7CBF295F063D0019C6B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3D7CC1295F063D0019C6B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C3D7CC3295F063D0019C6B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9C3D7CC6295F063D0019C6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C3D7CC3295F063D0019C6B1 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		9C3D7CC8295F063E0019C6B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C3D7CCB295F063E0019C6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3D7CCD295F063E0019C6B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3D7CD7295F13490019C6B1 /* intro.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.MP4; sourceTree = "<group>"; };
+		9C3D7CDC295F26B20019C6B1 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		9C68149E2962B55B00DB7AB4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C6814A02962B58900DB7AB4 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		9C6814C02962D9F800DB7AB4 /* YT_AdBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YT_AdBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6814C22962D9F800DB7AB4 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		9C6814C42962D9F800DB7AB4 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		9C6814C62962D9F800DB7AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6814D12962E17300DB7AB4 /* TestBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TestBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6814D32962E17400DB7AB4 /* blockerListForTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerListForTest.json; sourceTree = "<group>"; };
+		9C6814D52962E17400DB7AB4 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		9C6814D72962E17400DB7AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6814E22962E36D00DB7AB4 /* FontsBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FontsBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6814E42962E36D00DB7AB4 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		9C6814E62962E36D00DB7AB4 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		9C6814E82962E36D00DB7AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C68950329656F39001DD001 /* BlackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackListViewController.swift; sourceTree = "<group>"; };
+		9C7661102963F98C00B351E9 /* GamblingBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GamblingBlocker.entitlements; sourceTree = "<group>"; };
+		9C7661112963FB8F00B351E9 /* blockerListAll.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerListAll.json; sourceTree = "<group>"; };
+		9C7661462964097000B351E9 /* test_project_GTL.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = test_project_GTL.entitlements; sourceTree = "<group>"; };
+		9C7661B8296446FD00B351E9 /* blockerListImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerListImages.json; sourceTree = "<group>"; };
+		9C7661BA2964470700B351E9 /* blockerListMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = blockerListMedia.json; path = ../../../blockerListMedia.json; sourceTree = "<group>"; };
+		9C7661BC2964576D00B351E9 /* TestBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestBlocker.entitlements; sourceTree = "<group>"; };
+		9C7C953C2960346D008ED840 /* GamblingBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GamblingBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C7C953E2960346D008ED840 /* blockerListUsual.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerListUsual.json; sourceTree = "<group>"; };
+		9C7C95402960346D008ED840 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		9C7C95422960346D008ED840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C7C954D29603682008ED840 /* SocialNetwork.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SocialNetwork.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C7C954F29603682008ED840 /* blockerList2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList2.json; sourceTree = "<group>"; };
+		9C7C955129603682008ED840 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		9C7C955329603682008ED840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF808B729630419006572B6 /* ContentBlockerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9C3D7CB9295F063D0019C6B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3D7CDB295F183A0019C6B1 /* SnapKit in Frameworks */,
+				9C6814B92962C96800DB7AB4 /* Charts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814BD2962D9F800DB7AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814CE2962E17300DB7AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814DF2962E36D00DB7AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7C95392960346D008ED840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7C954A29603682008ED840 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,10 +190,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C2C16B32962A05A00E397D7 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				9C3D7CC3295F063D0019C6B1 /* VideoViewController.swift */,
+				9C3D7CDC295F26B20019C6B1 /* VideoPlayerView.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		9C3D7CB3295F063D0019C6B1 = {
 			isa = PBXGroup;
 			children = (
 				9C3D7CBE295F063D0019C6B1 /* test_project_GTL */,
+				9C7C953D2960346D008ED840 /* GamblingBlocker */,
+				9C7C954E29603682008ED840 /* SocialNetwork */,
+				9C6814C12962D9F800DB7AB4 /* YT_AdBlocker */,
+				9C6814D22962E17300DB7AB4 /* TestBlocker */,
+				9C6814E32962E36D00DB7AB4 /* FontsBlocker */,
 				9C3D7CBD295F063D0019C6B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +216,11 @@
 			isa = PBXGroup;
 			children = (
 				9C3D7CBC295F063D0019C6B1 /* test_project_GTL.app */,
+				9C7C953C2960346D008ED840 /* GamblingBlocker.appex */,
+				9C7C954D29603682008ED840 /* SocialNetwork.appex */,
+				9C6814C02962D9F800DB7AB4 /* YT_AdBlocker.appex */,
+				9C6814D12962E17300DB7AB4 /* TestBlocker.appex */,
+				9C6814E22962E36D00DB7AB4 /* FontsBlocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +228,132 @@
 		9C3D7CBE295F063D0019C6B1 /* test_project_GTL */ = {
 			isa = PBXGroup;
 			children = (
-				9C3D7CBF295F063D0019C6B1 /* AppDelegate.swift */,
-				9C3D7CC1295F063D0019C6B1 /* SceneDelegate.swift */,
-				9C3D7CC3295F063D0019C6B1 /* ViewController.swift */,
-				9C3D7CC5295F063D0019C6B1 /* Main.storyboard */,
-				9C3D7CC8295F063E0019C6B1 /* Assets.xcassets */,
-				9C3D7CCA295F063E0019C6B1 /* LaunchScreen.storyboard */,
-				9C3D7CCD295F063E0019C6B1 /* Info.plist */,
+				9C7661462964097000B351E9 /* test_project_GTL.entitlements */,
+				9C3D7CD4295F06870019C6B1 /* Sources */,
+				9C3D7CD3295F06810019C6B1 /* Resources */,
 			);
 			path = test_project_GTL;
+			sourceTree = "<group>";
+		};
+		9C3D7CD3295F06810019C6B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C68149E2962B55B00DB7AB4 /* Constants.swift */,
+				9C226C7D295FF6300002848B /* Localizable.strings */,
+				9C3D7CD7295F13490019C6B1 /* intro.MP4 */,
+				9C3D7CCD295F063E0019C6B1 /* Info.plist */,
+				9C3D7CC8295F063E0019C6B1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C3D7CD4295F06870019C6B1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9C68950229656C60001DD001 /* BlackList */,
+				9CF808B629630408006572B6 /* Blocker */,
+				9C2C16B32962A05A00E397D7 /* Video */,
+				9C6814BB2962D03800DB7AB4 /* Charts */,
+				9C6814BA2962D01D00DB7AB4 /* Storyboard */,
+				9C3D7CD6295F06910019C6B1 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9C3D7CD6295F06910019C6B1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C3D7CBF295F063D0019C6B1 /* AppDelegate.swift */,
+				9C3D7CC1295F063D0019C6B1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C6814BA2962D01D00DB7AB4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9C3D7CCA295F063E0019C6B1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9C6814BB2962D03800DB7AB4 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				9C6814A02962B58900DB7AB4 /* ChartsViewController.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		9C6814C12962D9F800DB7AB4 /* YT_AdBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				9C6814C22962D9F800DB7AB4 /* blockerList.json */,
+				9C6814C42962D9F800DB7AB4 /* ContentBlockerRequestHandler.swift */,
+				9C6814C62962D9F800DB7AB4 /* Info.plist */,
+			);
+			path = YT_AdBlocker;
+			sourceTree = "<group>";
+		};
+		9C6814D22962E17300DB7AB4 /* TestBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				9C7661BC2964576D00B351E9 /* TestBlocker.entitlements */,
+				9C6814D32962E17400DB7AB4 /* blockerListForTest.json */,
+				9C6814D52962E17400DB7AB4 /* ContentBlockerRequestHandler.swift */,
+				9C6814D72962E17400DB7AB4 /* Info.plist */,
+			);
+			path = TestBlocker;
+			sourceTree = "<group>";
+		};
+		9C6814E32962E36D00DB7AB4 /* FontsBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				9C6814E42962E36D00DB7AB4 /* blockerList.json */,
+				9C6814E62962E36D00DB7AB4 /* ContentBlockerRequestHandler.swift */,
+				9C6814E82962E36D00DB7AB4 /* Info.plist */,
+			);
+			path = FontsBlocker;
+			sourceTree = "<group>";
+		};
+		9C68950229656C60001DD001 /* BlackList */ = {
+			isa = PBXGroup;
+			children = (
+				9C68950329656F39001DD001 /* BlackListViewController.swift */,
+			);
+			path = BlackList;
+			sourceTree = "<group>";
+		};
+		9C7C953D2960346D008ED840 /* GamblingBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				9C7661102963F98C00B351E9 /* GamblingBlocker.entitlements */,
+				9C7C953E2960346D008ED840 /* blockerListUsual.json */,
+				9C7661BA2964470700B351E9 /* blockerListMedia.json */,
+				9C7661B8296446FD00B351E9 /* blockerListImages.json */,
+				9C7661112963FB8F00B351E9 /* blockerListAll.json */,
+				9C7C95402960346D008ED840 /* ContentBlockerRequestHandler.swift */,
+				9C7C95422960346D008ED840 /* Info.plist */,
+			);
+			path = GamblingBlocker;
+			sourceTree = "<group>";
+		};
+		9C7C954E29603682008ED840 /* SocialNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				9C7C954F29603682008ED840 /* blockerList2.json */,
+				9C7C955129603682008ED840 /* ContentBlockerRequestHandler.swift */,
+				9C7C955329603682008ED840 /* Info.plist */,
+			);
+			path = SocialNetwork;
+			sourceTree = "<group>";
+		};
+		9CF808B629630408006572B6 /* Blocker */ = {
+			isa = PBXGroup;
+			children = (
+				9CF808B729630419006572B6 /* ContentBlockerViewController.swift */,
+			);
+			path = Blocker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +366,110 @@
 				9C3D7CB8295F063D0019C6B1 /* Sources */,
 				9C3D7CB9295F063D0019C6B1 /* Frameworks */,
 				9C3D7CBA295F063D0019C6B1 /* Resources */,
+				9C7C95342960345E008ED840 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C7C95442960346D008ED840 /* PBXTargetDependency */,
+				9C7C955529603682008ED840 /* PBXTargetDependency */,
+				9C6814C82962D9F800DB7AB4 /* PBXTargetDependency */,
+				9C6814D92962E17400DB7AB4 /* PBXTargetDependency */,
+				9C6814EA2962E36D00DB7AB4 /* PBXTargetDependency */,
+			);
+			name = test_project_GTL;
+			packageProductDependencies = (
+				9C3D7CDA295F183A0019C6B1 /* SnapKit */,
+				9C6814B82962C96800DB7AB4 /* Charts */,
+			);
+			productName = test_project_GTL;
+			productReference = 9C3D7CBC295F063D0019C6B1 /* test_project_GTL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C6814BF2962D9F800DB7AB4 /* YT_AdBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6814CA2962D9F800DB7AB4 /* Build configuration list for PBXNativeTarget "YT_AdBlocker" */;
+			buildPhases = (
+				9C6814BC2962D9F800DB7AB4 /* Sources */,
+				9C6814BD2962D9F800DB7AB4 /* Frameworks */,
+				9C6814BE2962D9F800DB7AB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = test_project_GTL;
-			productName = test_project_GTL;
-			productReference = 9C3D7CBC295F063D0019C6B1 /* test_project_GTL.app */;
-			productType = "com.apple.product-type.application";
+			name = YT_AdBlocker;
+			productName = YT_AdBlocker;
+			productReference = 9C6814C02962D9F800DB7AB4 /* YT_AdBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9C6814D02962E17300DB7AB4 /* TestBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6814DB2962E17400DB7AB4 /* Build configuration list for PBXNativeTarget "TestBlocker" */;
+			buildPhases = (
+				9C6814CD2962E17300DB7AB4 /* Sources */,
+				9C6814CE2962E17300DB7AB4 /* Frameworks */,
+				9C6814CF2962E17300DB7AB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestBlocker;
+			productName = TestBlocker;
+			productReference = 9C6814D12962E17300DB7AB4 /* TestBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9C6814E12962E36D00DB7AB4 /* FontsBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6814EC2962E36D00DB7AB4 /* Build configuration list for PBXNativeTarget "FontsBlocker" */;
+			buildPhases = (
+				9C6814DE2962E36D00DB7AB4 /* Sources */,
+				9C6814DF2962E36D00DB7AB4 /* Frameworks */,
+				9C6814E02962E36D00DB7AB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontsBlocker;
+			productName = FontsBlocker;
+			productReference = 9C6814E22962E36D00DB7AB4 /* FontsBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9C7C953B2960346D008ED840 /* GamblingBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C7C95462960346D008ED840 /* Build configuration list for PBXNativeTarget "GamblingBlocker" */;
+			buildPhases = (
+				9C7C95382960346D008ED840 /* Sources */,
+				9C7C95392960346D008ED840 /* Frameworks */,
+				9C7C953A2960346D008ED840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GamblingBlocker;
+			productName = GamblingBlocker;
+			productReference = 9C7C953C2960346D008ED840 /* GamblingBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9C7C954C29603682008ED840 /* SocialNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C7C955729603682008ED840 /* Build configuration list for PBXNativeTarget "SocialNetwork" */;
+			buildPhases = (
+				9C7C954929603682008ED840 /* Sources */,
+				9C7C954A29603682008ED840 /* Frameworks */,
+				9C7C954B29603682008ED840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialNetwork;
+			productName = SocialNetwork;
+			productReference = 9C7C954D29603682008ED840 /* SocialNetwork.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +484,21 @@
 					9C3D7CBB295F063D0019C6B1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					9C6814BF2962D9F800DB7AB4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9C6814D02962E17300DB7AB4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9C6814E12962E36D00DB7AB4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9C7C953B2960346D008ED840 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9C7C954C29603682008ED840 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = 9C3D7CB7295F063D0019C6B1 /* Build configuration list for PBXProject "test_project_GTL" */;
@@ -109,13 +508,23 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 9C3D7CB3295F063D0019C6B1;
+			packageReferences = (
+				9C3D7CD9295F183A0019C6B1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9C6814B72962C96800DB7AB4 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 9C3D7CBD295F063D0019C6B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9C3D7CBB295F063D0019C6B1 /* test_project_GTL */,
+				9C7C953B2960346D008ED840 /* GamblingBlocker */,
+				9C7C954C29603682008ED840 /* SocialNetwork */,
+				9C6814BF2962D9F800DB7AB4 /* YT_AdBlocker */,
+				9C6814D02962E17300DB7AB4 /* TestBlocker */,
+				9C6814E12962E36D00DB7AB4 /* FontsBlocker */,
 			);
 		};
 /* End PBXProject section */
@@ -125,9 +534,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3D7CD8295F13490019C6B1 /* intro.MP4 in Resources */,
+				9C226C7B295FF6300002848B /* Localizable.strings in Resources */,
 				9C3D7CCC295F063E0019C6B1 /* LaunchScreen.storyboard in Resources */,
 				9C3D7CC9295F063E0019C6B1 /* Assets.xcassets in Resources */,
-				9C3D7CC7295F063D0019C6B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814BE2962D9F800DB7AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6814C32962D9F800DB7AB4 /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814CF2962E17300DB7AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6814D42962E17400DB7AB4 /* blockerListForTest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814E02962E36D00DB7AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6814E52962E36D00DB7AB4 /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7C953A2960346D008ED840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7C953F2960346D008ED840 /* blockerListUsual.json in Resources */,
+				9C7661122963FB8F00B351E9 /* blockerListAll.json in Resources */,
+				9C7661B9296446FD00B351E9 /* blockerListImages.json in Resources */,
+				9C7661BB2964470700B351E9 /* blockerListMedia.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7C954B29603682008ED840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7C955029603682008ED840 /* blockerList2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,27 +591,102 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3D7CC4295F063D0019C6B1 /* ViewController.swift in Sources */,
+				9C68950429656F39001DD001 /* BlackListViewController.swift in Sources */,
+				9CF808B829630419006572B6 /* ContentBlockerViewController.swift in Sources */,
+				9C68149F2962B55B00DB7AB4 /* Constants.swift in Sources */,
+				9C3D7CC4295F063D0019C6B1 /* VideoViewController.swift in Sources */,
 				9C3D7CC0295F063D0019C6B1 /* AppDelegate.swift in Sources */,
 				9C3D7CC2295F063D0019C6B1 /* SceneDelegate.swift in Sources */,
+				9C6814A12962B58900DB7AB4 /* ChartsViewController.swift in Sources */,
+				9C3D7CDD295F26B20019C6B1 /* VideoPlayerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814BC2962D9F800DB7AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6814C52962D9F800DB7AB4 /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814CD2962E17300DB7AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6814D62962E17400DB7AB4 /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6814DE2962E36D00DB7AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6814E72962E36D00DB7AB4 /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7C95382960346D008ED840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7C95412960346D008ED840 /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7C954929603682008ED840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7C955229603682008ED840 /* ContentBlockerRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C6814C82962D9F800DB7AB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6814BF2962D9F800DB7AB4 /* YT_AdBlocker */;
+			targetProxy = 9C6814C72962D9F800DB7AB4 /* PBXContainerItemProxy */;
+		};
+		9C6814D92962E17400DB7AB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6814D02962E17300DB7AB4 /* TestBlocker */;
+			targetProxy = 9C6814D82962E17400DB7AB4 /* PBXContainerItemProxy */;
+		};
+		9C6814EA2962E36D00DB7AB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6814E12962E36D00DB7AB4 /* FontsBlocker */;
+			targetProxy = 9C6814E92962E36D00DB7AB4 /* PBXContainerItemProxy */;
+		};
+		9C7C95442960346D008ED840 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C7C953B2960346D008ED840 /* GamblingBlocker */;
+			targetProxy = 9C7C95432960346D008ED840 /* PBXContainerItemProxy */;
+		};
+		9C7C955529603682008ED840 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C7C954C29603682008ED840 /* SocialNetwork */;
+			targetProxy = 9C7C955429603682008ED840 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		9C3D7CC5295F063D0019C6B1 /* Main.storyboard */ = {
+		9C226C7D295FF6300002848B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9C3D7CC6295F063D0019C6B1 /* Base */,
+				9C226C7C295FF6300002848B /* en */,
+				9C226C7E295FF6340002848B /* ru */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		9C3D7CCA295F063E0019C6B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C3D7CCB295F063E0019C6B1 /* Base */,
+				9C226C78295FF5F30002848B /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,6 +698,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -230,6 +759,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -283,16 +813,17 @@
 		9C3D7CD1295F063E0019C6B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = test_project_GTL/test_project_GTL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWG4FB8T87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = test_project_GTL/Info.plist;
+				INFOPLIST_FILE = test_project_GTL/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,16 +842,17 @@
 		9C3D7CD2295F063E0019C6B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = test_project_GTL/test_project_GTL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWG4FB8T87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = test_project_GTL/Info.plist;
+				INFOPLIST_FILE = test_project_GTL/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,6 +862,270 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C6814CB2962D9F800DB7AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YT_AdBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YT_AdBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.YT-AdBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C6814CC2962D9F800DB7AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YT_AdBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YT_AdBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.YT-AdBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C6814DC2962E17400DB7AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = TestBlocker/TestBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TestBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.TestBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C6814DD2962E17400DB7AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = TestBlocker/TestBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TestBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.TestBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C6814ED2962E36D00DB7AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FontsBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FontsBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.FontsBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C6814EE2962E36D00DB7AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FontsBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FontsBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.FontsBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C7C95472960346D008ED840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = GamblingBlocker/GamblingBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GamblingBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GamblingBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.GamblingBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C7C95482960346D008ED840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = GamblingBlocker/GamblingBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GamblingBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GamblingBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.GamblingBlocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C7C955829603682008ED840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocialNetwork/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SocialNetwork;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.SocialNetwork";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C7C955929603682008ED840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWG4FB8T87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocialNetwork/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SocialNetwork;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Golikov.test-project-GTL.SocialNetwork";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,7 +1153,84 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9C6814CA2962D9F800DB7AB4 /* Build configuration list for PBXNativeTarget "YT_AdBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6814CB2962D9F800DB7AB4 /* Debug */,
+				9C6814CC2962D9F800DB7AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6814DB2962E17400DB7AB4 /* Build configuration list for PBXNativeTarget "TestBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6814DC2962E17400DB7AB4 /* Debug */,
+				9C6814DD2962E17400DB7AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6814EC2962E36D00DB7AB4 /* Build configuration list for PBXNativeTarget "FontsBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6814ED2962E36D00DB7AB4 /* Debug */,
+				9C6814EE2962E36D00DB7AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C7C95462960346D008ED840 /* Build configuration list for PBXNativeTarget "GamblingBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C7C95472960346D008ED840 /* Debug */,
+				9C7C95482960346D008ED840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C7C955729603682008ED840 /* Build configuration list for PBXNativeTarget "SocialNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C7C955829603682008ED840 /* Debug */,
+				9C7C955929603682008ED840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C3D7CD9295F183A0019C6B1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		9C6814B72962C96800DB7AB4 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C3D7CDA295F183A0019C6B1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C3D7CD9295F183A0019C6B1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		9C6814B82962C96800DB7AB4 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C6814B72962C96800DB7AB4 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C3D7CB4295F063D0019C6B1 /* Project object */;
 }
