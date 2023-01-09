@@ -1,17 +1,17 @@
 //
-//  BlackListViewController.swift
+//  WhiteListViewController.swift
 //  test_project_GTL
 //
-//  Created by User on 04.01.2023.
+//  Created by User on 05.01.2023.
 //
 
 import UIKit
 import SafariServices
 
-class BlackListViewController: UIViewController {
+class WhiteListViewController: UIViewController {
 
     let appGroupName = "group.Artem-Golikov.test-project-GTL.batch"
-    var blackListObject: WebsitesList
+    var whiteListObject: WebsitesList
 
     private lazy var gradientImage: UIImageView = {
         let image = UIImageView(image: UIImage(named: "gradient"))
@@ -19,7 +19,7 @@ class BlackListViewController: UIViewController {
         return image
     }()
 
-    private lazy var blackListTable: UITableView = {
+    private lazy var whiteListTable: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.backgroundColor = .clear
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -40,7 +40,8 @@ class BlackListViewController: UIViewController {
     }()
 
     init() {
-        self.blackListObject = UserDefaults(suiteName: "group.Artem-Golikov.test-project-GTL.batch")?.object(forKey: "blackListSites") as! WebsitesList
+        self.whiteListObject = UserDefaults(
+            suiteName: "group.Artem-Golikov.test-project-GTL.batch")?.object(forKey: "whiteListSites") as! WebsitesList
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -50,22 +51,21 @@ class BlackListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Black List"
+        title = "White List"
         navigationController?.navigationBar.prefersLargeTitles = true
         setupHierarchy()
         setupLayout()
-
     }
 
     private func setupHierarchy() {
         view.addSubview(gradientImage)
-        view.addSubview(blackListTable)
+        view.addSubview(whiteListTable)
         view.addSubview(button)
     }
 
     private func setupLayout() {
         gradientImage.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.leading.trailing.bottom.equalTo(view)
         }
 
         button.snp.makeConstraints { make in
@@ -75,23 +75,23 @@ class BlackListViewController: UIViewController {
             make.width.equalTo(120)
         }
 
-        blackListTable.snp.makeConstraints { make in
+        whiteListTable.snp.makeConstraints { make in
             make.top.equalTo(view.snp.centerY).multipliedBy(0.35)
             make.leading.trailing.bottom.equalTo(view)
         }
     }
 
     @objc func addSite() {
-        let nextVC = BlackListDetailViewController()
+        let nextVC = WhiteListDetailViewController()
         nextVC.delegate = self
         present(nextVC, animated: true)
     }
 }
 
-extension BlackListViewController: UITableViewDataSource, UITableViewDelegate {
+extension WhiteListViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return blackListObject.count
+        return whiteListObject.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,9 +100,9 @@ extension BlackListViewController: UITableViewDataSource, UITableViewDelegate {
             for: indexPath
         )
         cell.backgroundColor = .clear
-        let websiteByIndex = blackListObject[indexPath.row]
-        let websiteAddress = websiteByIndex["trigger"]?["url-filter"] as? String
-        cell.textLabel?.text = websiteAddress
+        let websiteByIndex = whiteListObject[indexPath.row]
+        let websiteAddress = websiteByIndex["trigger"]?["unless-domain"] as? [String]
+        cell.textLabel?.text = websiteAddress?.first
         cell.textLabel?.textColor = .white
         cell.textLabel?.font = UIFont(name: "avenir", size: 18)
         return cell
@@ -111,21 +111,22 @@ extension BlackListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
-            self.removeSite(withIndex: indexPath.row, fromFile: "whiteList")
+            self.removeSite(withIndex: indexPath.row, fromFile: "allowList")
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
     }
 }
 
-extension BlackListViewController {
+extension WhiteListViewController {
 
     func removeSite(withIndex index: Int, fromFile fileName: String) {
-        guard !blackListObject.isEmpty else { return }
-        blackListObject.remove(at: index)
-        UserDefaults(suiteName: appGroupName)?.set(blackListObject, forKey: "blackListSites")
+        if !whiteListObject.isEmpty {
+            whiteListObject.remove(at: index)
+            UserDefaults(suiteName: appGroupName)?.set(whiteListObject, forKey: "whiteListSites")
+        }
         writeJSON(
-            withObject: blackListObject,
+            withObject: whiteListObject,
             andFileName: fileName,
             groupIDentifier: "group.Artem-Golikov.test-project-GTL.batch",
             blockerIDentifier: "Artem-Golikov.test-project-GTL.TestBlocker"
@@ -133,10 +134,10 @@ extension BlackListViewController {
     }
 }
 
-extension BlackListViewController: BlackListDelegate {
+extension WhiteListViewController: WhiteListDelegate {
     func reloadData() {
         DispatchQueue.main.async {
-            self.blackListTable.reloadData()
+            self.whiteListTable.reloadData()
         }
     }
 }

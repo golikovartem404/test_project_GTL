@@ -11,10 +11,14 @@ import MobileCoreServices
 class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
 
     func beginRequest(with context: NSExtensionContext) {
-        let attachment = NSItemProvider(contentsOf: Bundle.main.url(forResource: "blockerList", withExtension: "json"))!
+        let sharedContainerURL = FileManager.default.containerURL(
+            forSecurityApplicationGroupIdentifier: "group.Artem-Golikov.test-project-GTL.batch")
+        let sourceURL = sharedContainerURL?.appendingPathComponent("allowList.json")
+        let ruleAttachment = NSItemProvider(contentsOf: sourceURL)
+//        let attachment = NSItemProvider(contentsOf: Bundle.main.url(forResource: "blockerList", withExtension: "json"))!
         
         let item = NSExtensionItem()
-        item.attachments = [attachment]
+        item.attachments = ([ruleAttachment] as! [NSItemProvider])
         
         context.completeRequest(returningItems: [item], completionHandler: nil)
     }

@@ -7,6 +7,8 @@
 
 import UIKit
 
+typealias WebsitesList = [[String: [String: Any]]]
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -14,7 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = BlackListViewController()
+        let appGroupName = "group.Artem-Golikov.test-project-GTL.batch"
+        let defaults = UserDefaults(suiteName: appGroupName)
+        if defaults?.object(forKey: "blackListSites") as? WebsitesList != nil {
+            window?.rootViewController = ListsTabBarController()
+        } else {
+            window?.rootViewController = UINavigationController(rootViewController: ContentBlockerViewController())
+        }
         window?.makeKeyAndVisible()
     }
 }

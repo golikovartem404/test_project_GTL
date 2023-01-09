@@ -1,0 +1,34 @@
+[
+    {
+        "trigger" : {
+            "url-filter" : "https://m.facebook.com"
+        },
+        "action" : {
+            "type" : "block"
+        }
+    },
+    {
+        "trigger" : {
+            "url-filter" : "https://www.championat.com"
+        },
+        "action" : {
+            "type" : "block"
+        }
+    },
+    {
+        "action" : {
+            "type" : "block"
+        },
+        "trigger" : {
+            "url-filter" : "https://m.vk.com"
+        }
+    },
+    {
+        "action" : {
+            "type" : "block"
+        },
+        "trigger" : {
+            "url-filter" : "https://www.championat.com/football/article-4946707-15-letnij-brat-kiliana-mbappe-debyutiroval-za-pszh-chto-nuzhno-znat-ob-etane-mbappe-statistika.html"
+        }
+    }
+]

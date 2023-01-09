@@ -4,7 +4,7 @@
             "type": "block"
         },
         "trigger": {
-            "url-filter": "https://m.facebook.com"
+            "url-filter": " "
         }
     }
 ]

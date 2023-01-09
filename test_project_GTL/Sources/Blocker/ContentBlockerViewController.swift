@@ -54,17 +54,11 @@ class ContentBlockerViewController: UIViewController {
         return stack
     }()
 
-    private lazy var siteTextField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        return textField
-    }()
-
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Add site", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.addTarget(self, action: #selector(addSiteToBlackList), for: .touchUpInside)
+        button.setTitle("Go next VC", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(goToNextVC), for: .touchUpInside)
         return button
     }()
 
@@ -73,6 +67,10 @@ class ContentBlockerViewController: UIViewController {
         title = "Black list"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
+        let appGroupName = "group.Artem-Golikov.test-project-GTL.batch"
+        let defaults = UserDefaults(suiteName: appGroupName)
+        defaults?.set(WebsitesList(), forKey: "blackListSites")
+        defaults?.set(WebsitesList(), forKey: "whiteListSites")
         setupHierarchy()
         setupLayout()
     }
@@ -84,7 +82,6 @@ class ContentBlockerViewController: UIViewController {
         mediaStack.addArrangedSubview(medialabel)
         mediaStack.addArrangedSubview(contentMediaSwitch)
         view.addSubview(mediaStack)
-        view.addSubview(siteTextField)
         view.addSubview(button)
     }
 
@@ -97,12 +94,6 @@ class ContentBlockerViewController: UIViewController {
         mediaStack.snp.makeConstraints { make in
             make.centerX.equalTo(view.snp.centerX)
             make.centerY.equalTo(view.snp.centerY).multipliedBy(1.2)
-        }
-
-        siteTextField.snp.makeConstraints { make in
-            make.centerX.equalTo(view.snp.centerX)
-            make.centerY.equalTo(view.snp.centerY).multipliedBy(1.4)
-            make.width.equalTo(view.snp.width).multipliedBy(0.8)
         }
 
         button.snp.makeConstraints { make in
@@ -143,70 +134,53 @@ class ContentBlockerViewController: UIViewController {
         }
     }
 
-    @objc func addSiteToBlackList() {
-        guard let siteAddress = siteTextField.text else { return }
-        activateFilterBlock(fileName: "whiteList", website: siteAddress)
-//        addNewSiteToBlackList(siteName: siteAddress)
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
     }
 
-    func activateFilterBlock(fileName: String, website: String) {
-        let data = [["action": ["type": "block"], "trigger": ["url-filter": "\(website)"]]]
-        self.blackListArray.insert(contentsOf: data, at: 0)
-        let jsonData = try! JSONSerialization.data(withJSONObject: blackListArray, options: .prettyPrinted)
-        if let json = String(data: jsonData, encoding: String.Encoding.utf8) {
-            let file = "\(fileName).json"
-            if let dir = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.Artem-Golikov.test-project-GTL.batch") {
-                let path = dir.appendingPathComponent(file)
+
+    func transformStrings() {
+        guard let jsonFileMain = Bundle.main.url(forResource: "blockerListAdult", withExtension: "json") else {
+            print("NO FILE")
+            return
+        }
+        for address in Constants.data2 {
+            let data = [["action": ["type": "block"], "trigger": ["url-filter": "\(address)"]]]
+            blackListArray.append(contentsOf: data)
+            let jsonData = try! JSONSerialization.data(
+                withJSONObject: blackListArray,
+                options: .prettyPrinted
+            )
+            if let json = String(data: jsonData, encoding: String.Encoding.utf8) {
                 do {
-                    print(json)
-                    try json.write(to: path, atomically: false, encoding: String.Encoding.utf8)
-                    SFContentBlockerManager.reloadContentBlocker(withIdentifier: "Artem-Golikov.test-project-GTL.TestBlocker") { error in
-                        guard error == nil else {
-                            print(error ?? "Error")
-                            return
-                        }
-                        print("Reloaded - site \(website) was added")
-                    }
+                    try json.write(
+                        to: jsonFileMain,
+                        atomically: false,
+                        encoding: String.Encoding.utf8
+                    )
                 } catch {
                     print(error.localizedDescription)
                 }
             }
         }
+        do {
+            let dataFile = try Data(contentsOf: jsonFileMain)
+            if let jsonString = String(data: dataFile, encoding: .utf8) {
+                print(jsonString)
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 
-    func addNewSiteToBlackList(siteName: String) {
-        let data = ["action": ["type": "block"], "trigger": ["url-filter": "\(siteName)"]]
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        if let encoded = try? encoder.encode(data) {
-            let sharedContainerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.Artem-Golikov.test-project-GTL.batch")
-            if let destinationURL = sharedContainerURL?.appendingPathComponent("blackList.json") {
-                print(destinationURL)
-                do {
-                    print(encoded)
-                    try encoded.write(to: destinationURL)
-                    print("Success added")
-                    SFContentBlockerManager.reloadContentBlocker(withIdentifier: "Artem-Golikov.test-project-GTL.TestBlocker") { IDerror in
-                        if IDerror != nil {
-                            print(IDerror?.localizedDescription ?? "ERROR: NOT RELOAD")
-                        } else {
-                            print("Reloaded")
-                        }
-                    }
-                } catch let error {
-                    print(error.localizedDescription)
-                }
-                do {
-                    let newData = try Data(contentsOf: destinationURL)
-                    let jsonResult = try JSONSerialization.jsonObject(with: newData)
-                    if let jsonAsString = jsonResult as? Dictionary<String, Any> {
-                        print(jsonAsString)
-                    }
-                } catch let error {
-                    print(error.localizedDescription)
-                }
-            }
-        }
-        //        let jsonData = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+    @objc func goToNextVC() {
+        self.navigationController?.pushViewController(BlackListViewController(), animated: true)
     }
 }
